@@ -1,0 +1,608 @@
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #header{
+            height: 40px;
+            width: 1366px;
+            background: black;
+            position: fixed;
+        }
+        .logo{
+            width: 600px;
+            height:40px;
+            color: white;
+            font-size: 25px; text-align: center;
+            line-height: 40px;
+            font-family: times new roman;
+            float: left;
+            text-align: center;
+        }
+        .menu{
+            height: 40px;
+            width: 750px;
+            float: left;
+        }
+        .menu ul li{
+            list-style: none;
+            font-size: 20px;
+            color: white;
+            float: left;
+            line-height: 40px;
+            text-align:right;
+            margin-left: 50px;
+        }
+        .slider{
+            min-height: 500px;
+            width: 1366px;
+            background: linear-gradient(45deg,#8000ff,#ae5eff,#c891ff,#5effff);
+            box-sizing: border-box;
+            //position: fixed;
+             
+        }
+        .portfolio{
+            height: 700px;
+            width: 450px;
+            background: white;
+            transform: translateY(100px);
+            margin-left: 450px;
+            border-radius: 5px;
+            //position: fixed;
+            transition: all ease 2s;
+           
+        }
+        .portfolio:hover{
+            transform: scale(1.01);
+            transition: all ease 3s;
+        }
+        .image{
+            height:300px;
+            width: 350px;
+        }
+         .intro{
+            height:400px;
+            width: 350px;
+             
+             margin-left: 80px;
+        }
+        .intro p{
+            font-size: 15px;
+            font-family: arial;
+        }
+        .aboutUs{
+            height: 500px;
+            width: 1366px;
+            background: #e1e1e1;
+            color: black;
+            box-sizing: border-box;
+        }
+        .myself{
+            height: 300px;
+            width: 1366px;
+            box-sizing: border-box;
+        }
+        .bottomabout{
+            height: 200px;
+            width: 1366px;
+            
+            padding-top: 20px;
+        }
+        
+        .progress{
+            height:50px;
+            width: 1366px;
+        }
+        .prg{
+            height: 10px;
+            width: 500px;
+            background: #c7c7c7;
+        }
+        .inner{
+            border-radius: 5px;
+            height: 10px;
+            width: 500px;
+            animation-name:progress;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-delay: .5s;
+            animation-timing-function: linear;
+           // animation-play-state: running;
+            animation-fill-mode: forwards;
+        }
+        @keyframes progress{
+            from{
+            width:50px;
+            background:linear-gradient(45deg,#8000ff,#ae5eff,#c891ff,#5effff);
+        }
+            to{
+                width:350px;
+            background:linear-gradient(45deg,#8000ff,#ae5eff,#c891ff,#5effff);
+                //animation-play-state: paused;
+            }
+        }
+        .inner{
+            
+        }
+        .myexperience{
+            height: 400px;
+            width: 1366px;
+            background: linear-gradient(45deg,#5effff,#8000ff,#ae5eff,#c891ff,#5effff);
+            box-sizing: border-box;
+            
+        }
+        .exp{
+            height: 60px;
+            width: 1366px;
+        }
+        .expbtn{
+            height: 50px;
+            width: 200px;
+            float: left;
+        }
+        .expbtn1{
+            height: 50px;
+            width: 500px;
+            float: left;
+        }
+        .exp1{
+            height: 550px;
+               width: 1366px;
+        }
+        .services{
+            min-height: 600px;
+            width: 1366px;
+            background: #c0c0c0;
+            box-sizing: border-box;
+        }
+        .service{
+            min-height: 100px;
+            width: 1366px;
+            text-align: center;
+            line-height: 100px;
+            box-sizing: border-box;
+        }
+        .service1{
+            min-height: 500px;
+            width: 1366px;
+            box-sizing: border-box;
+            
+        }
+        .box{
+            padding-top: 50px;
+            padding-right: 5px;
+            margin-left: 350px;
+            height: 350px;
+            width: 250px;
+            float: left;
+            text-align: center;
+            background: white;
+            border-radius: 5px;
+        }
+        .box1{
+            padding-top: 50px;
+            padding-right: 5px;
+            margin-left: 50px;
+            height: 350px;
+            width: 250px;
+            float: left;
+            text-align: center;
+            background: white;
+            border-radius: 5px;
+        }
+        .projects{
+            
+            height: 700px;
+            width: 1366px;
+            box-sizing: border-box;
+            
+            
+        }
+        .projhead{
+            min-height: 100px;
+            width:1366px;
+            text-align:center;
+            
+           // line-height: 100px;
+            box-sizing: border-box;
+            
+        }
+        .projhead h1{
+            padding-top: 30px;
+            font-weight: bold;
+        }
+        .projhead p{
+            padding-top: 10px;
+        }
+        .projpic{
+            
+            height: 200px;
+            width: 200px;
+            background: red;
+            margin-left: 300px;
+            margin-top: 20px;
+            float: left;
+        }
+        .projpic1{
+            height: 200px;
+            width: 200px;
+            background: red;
+            margin-left: 50px;
+            float: left;
+            margin-top: 20px;
+        }
+         .projpic2{
+             margin-top: 20px;
+            height: 200px;
+            width: 200px;
+            background: red;
+            margin-left: 50px;
+            float: left;
+        }
+        .projpic3{
+             margin-top: 50px;
+            height: 200px;
+            width: 200px;
+            background: red;
+            margin-left: 300px;
+            float: left;
+        }
+         .projpic4{
+             margin-top: 50px;
+            height: 200px;
+            width: 200px;
+            background: red;
+            margin-left: 50px;
+            float: left;
+        }
+        
+        .projpic5{
+             margin-top: 550px;
+            height: 200px;
+            width: 200px;
+            //background: red;
+            margin-left: 550px;
+/*            float: left;*/
+        }
+        .projpic5 input{
+            height: 40px;
+            width: 200px;
+            background: linear-gradient(45deg,#5effff,#8000ff,#ae5eff,#c891ff,#5effff);
+            color: white;
+            font-size: 15px;
+            border: 0px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .clients{
+         height: 500px;
+            width: 1366px;
+            //background: green;
+            box-sizing: border-box;
+            margin-top: 100px;
+        }
+        .test{
+            height: 100px;
+            width: 1366px;
+           // background: black;
+            box-sizing: border-box;
+           // text-align: justify
+            
+        }
+        .feedback{
+            height: 400px;
+            width: 1366px;
+           // background: aqua;
+            box-sizing: border-box;
+            
+        }
+        .cards{
+            text-align: center;
+            height: 300px;
+            width: 250px;
+            background: #e1e1e1;
+            margin-top: 50px;
+            margin-left: 200px;
+            float: left;
+            
+        }
+         .cards1{
+            height: 300px;
+            width: 250px;
+           background: #e1e1e1;
+            margin-top: 50px;
+            margin-left: 50px;
+            float: left
+        }
+         .cards2{
+            height: 300px;
+            width: 250px;
+            background: #e1e1e1;
+            margin-top: 50px;
+            margin-left: 50px;
+            float: left
+        }
+        .footer{
+            height: 300px;
+            width: 1366px;
+           // background: #d4d4d4;
+            background: black;
+            float: left;
+            box-sizing: border-box;
+            color: white;
+            
+        }
+        .Lfooter{
+           width: 683px;
+            height: 300px;
+            float: left;
+            //background: black;
+            
+            
+        }
+        .Lfooter h2,p{
+            //text-align: center;
+            
+        }
+        .Rfooter{
+           width: 683px;
+           height: 300px;
+           float: left;
+            // background: white;
+        }
+            .Rfooter input[type="text"]
+        
+        {
+            border-radius: 5px;
+            border: 0px;
+            
+            
+        }
+        .Rfooter input[type="button"]{
+            background: linear-gradient(45deg,#5effff,#8000ff,#ae5eff,#c891ff,#5effff);
+            border-radius:5px;
+            border: 0px;
+            
+        }
+        ::placeholder{
+            color: black;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+    </style>
+    </head>
+
+    <body>
+    
+        <div id="header">
+        <div class="logo">
+            <b style="color:#4a8af4;font-size: 30px; ">tech</b>Shubham
+            </div>
+            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">techSbhubham</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index1.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Conatct Us</a>
+                            </li>
+        
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <button type="submit" class="btn btn-danger mx-2">Login</button>
+                        <button type="submit" class="btn btn-danger mx-2">Sign Up</button>
+                        
+                    </div>
+                </div>
+            </nav>
+             </div>
+        <div class="slider">
+        <div class="portfolio">
+        <div class="image">
+            <img style="margin-left: 85px; margin-top: 20px;" height="260px" width="280px;" src="images/IMG_20210619_152749.jpg">
+            </div>    
+        <div class="intro">
+            
+            <p>HELLO Everybody,I Am</p>
+            <h1>Shubham Chaudhary</h1><br>
+            <p><b style="padding-top: 20px;">Web Developer and UI Designer</b></p><br>
+            
+            <p>I am Web developer and Front-End Designer also Website Builder</p>
+            <img height="20px" width="20px;"  style="line-height: 35px; margin-top: 30px;" src="images/manlogo.PNG"> &nbsp;<span style="transform: translateY(-30px);"> +917080699808,6386768814</span><br>
+            <img  style="line-height: : 35px; margin-top: 15px;" src="images/googlepay.PNG"><label>techshubham10@gmail.com</label><br>
+            <img  style="line-height:  35px;margin-top: 15px;" src="images/phonepay.PNG"><label>Hazratganj Lucknow  U.P.</label><br><br><br>
+            <img style="margin-top: 2px;" src="images/fblogo.PNG">
+            <img  style="margin-top: 2px;" src="images/twitterlogo.PNG">
+            <img  style="margin-top: 2px;" src="images/linkedinlogo.PNG">
+            </div>    
+            </div>
+        </div>
+        
+        <div class="aboutUs">
+            <div class="myself">
+        <h1 style="line-height:250px; padding-left: 450px; ">ABOUT MYSELF</h1>
+            <span style="padding-left: 450px;margin-bottom: 300px;word-spacing: 5px;">I have completed my Diploma in Computer Science</span><br> <span style="padding-left: 450px;margin-bottom: 300px; word-spacing: 5px;"> And Engineering From M P Polytechnic Gorakhpur.</span><br>
+                <span style="padding-left: 450px;margin-bottom: 300px;word-spacing: 5px;">I have Developed many project On Web development </span>
+            <br></div>
+            <div class="bottomabout">
+                <div class="progress">
+                    <h3 style="margin-left: 450px;">HTML</h3>
+                    <div style="margin-left: 450px;" class="prg">
+                    <div class="inner"></div>
+                    </div>
+                </div>
+                
+                 <div class="progress">
+                    <h3 style="margin-left: 450px;">CSS</h3>
+                    <div style="margin-left: 450px;" class="prg">
+                    <div class="inner"></div>
+                    </div>
+                </div>
+                 <div class="progress">
+                    <h3 style="margin-left: 450px;">JAVASCRIPT</h3>
+                    <div style="margin-left: 450px;" class="prg">
+                    <div class="inner"></div>
+                        
+                    </div>
+                </div>
+                </div>
+        </div>
+        
+        <div class="myexperience">
+        <div class="exp">
+            <div style="padding-top: 50px;margin-left: 500px;" class="expbtn">
+            <input style="height: 40px; width: 150px;font-weight: bolder;font-size: 15px;border: 0px; border-radius: 5px; background: white;color: black;" type="submit" value="My Experiences">
+            </div>
+            <div style="padding-top: 50px;margin-left: 10px;" class="expbtn1">
+            <input style="height: 40px; width: 150px;font-weight: bolder;font-size: 15px;border: 0px; border-radius: 5px; background: #bb76ff;color: white;" type="submit" value="My Education">
+            </div>
+            </div>
+            <div class="exp1">
+            <div style="padding-top: 50px;margin-left: 500px;" class="expbtn">
+                <p style="height: 40px; width: 150px;font-weight: bolder;font-size: 15px;border: 0px; border-radius: 5px;color: white;">
+                Summer Training 2020 <br>Web Development.
+                </p>
+            </div>
+                <div style="padding-top: 50px;margin-left: 500px;" class="expbtn">
+                <p style="height: 40px; width: 150px;font-weight: bolder;font-size: 15px;border: 0px; border-radius: 5px;color: white;">
+               Internship Techpile Technology PVT LTD 2020 <br>Web Development.
+                </p>
+            </div>
+            <div style="padding-top: 50px;margin-left: 10px;" class="expbtn1">
+                <p style="height: 40px; width: 150px;font-weight: bolder;font-size: 15px;border: 0px; border-radius: 5px; background: #bb76ff;color: white;">
+                M P Polytechnic GKP 2018-2021
+                </p>
+            </div>
+
+            </div>
+        </div>
+        
+        <div class="services">
+        <div class="service"><span>OFFERINGS TO MY CLIENTS </span>
+            
+            </div>
+             <div class="service1">
+            <div class="box">
+                 <img src="images/manlogo.PNG">
+                <h3>Web Devlopment</h3>
+                <p>If You want to make your website<br>then you are in right place here you <br>
+                get your perfect and well maintaned fully responsive website.<br> You want to make your website<br>then you are in right place here you</p>
+                 </div>
+                 
+                 <div class="box1">
+                 <img src="images/course.PNG">
+                <h3>Web Devlopment</h3>
+                <p>If You want to make your website<br>then you are in right place here you <br>
+                get your perfect and well maintaned fully responsive website.<br> You want to make your website<br>then you are in right place here you</p>
+                 </div>
+            </div>
+        </div>
+        
+        <div class="projects">
+        <div class="projhead">
+            <h1>OUR LATEST FEATURED PROJECTS</h1>
+            <p>We work on latest project at different technology.</p>
+            </div>
+            <div class="projpic">
+            <img  height="200px;" width="200px" src="images/img12.jpg">
+                <p style="text-align: center;font-weight: bolder;padding-top: 5px;">Animated 3D Design</p>
+            </div>
+            
+            <div class="projpic1">
+            <img  height="200px;" width="200px" src="images/img2.jpg">
+                <p style="text-align: center;font-weight: bolder;padding-top: 5px;">Responsive Pages with Bootstrap</p>
+            </div>
+            
+            <div class="projpic2">
+            <img  height="200px;" width="200px" src="images/img7.jpg">
+                <p style="text-align: center;font-weight: bolder;padding-top: 5px;">Java Script Responsive pages</p>
+            </div>
+            <br>
+
+            <div class="projpic3">
+            <img  height="200px;" width="200px" src="images/img9.jpg">
+                <p style="text-align: center;font-weight: bolder;padding-top: 5px;">Web pages for Hotels Booking</p>
+            </div>
+            
+             <div class="projpic4">
+            <img  height="200px;" width="200px" src="images/img10.jpg">
+                <p style="text-align: center;font-weight: bolder;padding-top: 5px;">Web pages for Hill Station Booking</p>
+            </div>
+            
+            <div class="projpic4">
+            <img  height="200px;" width="200px" src="images/img11.jpg">
+                <p style="text-align: center;font-weight: bolder;padding-top: 5px;">Web pages for Portfolio Booking</p>
+            </div>
+            
+             <div class="projpic5">
+            <input type="button" value="Load More">
+            </div>
+            
+        </div>
+        <div class="clients">
+        <div class="test">
+            <h1 style="margin-right:80px;line-height: 100px;text-align: center;">TESTIMONIALS</h1>
+            <p style="margin-left: 340px;">If you are looking for at blank cassetson the web.you may confused at the difference price.</p>
+            </div>
+            <div class="feedback">
+              <div class="cards">
+                <p style="padding-top: 10px;">This is great and amazing website in this planet.here i found everything i want.this is a awsome site.This is great and amazing website in this planet.here i found everything i want.this is a awsome site.This is great and amazing website in this planet.here i found everything i want.this is a awsome site.</p>
+                  <h3 style="text-align: left; padding-left: 10px;padding-top: 20px;">Shubham chaudhary</h3>
+                  <p style="text-align: left; padding-left: 10px;">Web Developer</p>
+                  <address style="text-align: left; padding-left: 10px;">Khalilabad Sant Kabir Nagar</address>
+                </div>
+              <div class="cards1">
+                <p style="padding-top: 10px;">This is great and amazing website in this planet.here i found everything i want.this is a awsome site.This is great and amazing website in this planet.here i found everything i want.this is a awsome site.This is great and amazing website in this planet.here i found everything i want.this is a awsome site.</p>
+                  <h3 style="text-align: left; padding-left: 10px;padding-top: 20px;">Shubham chaudhary</h3>
+                  <p style="text-align: left; padding-left: 10px;">Web Developer</p>
+                  <address style="text-align: left; padding-left: 10px;">Khalilabad Sant Kabir Nagar</address>
+                </div>
+              <div class="cards2">
+                  <p style="padding-top: 10px;">This is great and amazing website in this planet.here i found everything i want.this is a awsome site.This is great and amazing website in this planet.here i found everything i want.this is a awsome site.This is great and amazing website in this planet.here i found everything i want.this is a awsome site.</p>
+                  <h3 style="text-align: left; padding-left: 10px;padding-top: 20px;">Shubham chaudhary</h3>
+                  <p style="text-align: left; padding-left: 10px;">Web Developer</p>
+                  <address style="text-align: left; padding-left: 10px;">Khalilabad Sant Kabir Nagar</address></div>
+            </div>
+        
+        </div>
+        <div class="footer">
+        <div class="Lfooter">
+            <h2 style="margin-left: 400px;padding-top: 20px;">About Me</h2>
+            <p style="margin-left: 400px;padding-top: 20px;">I have 1-year experiance on web devlopment<br>I have worked on different technology<br>and work on different projects</p>
+            <p style="margin-left: 400px;padding-top: 20px;">Copyright ©2021 All rights are reserved.</p>
+            <h3 style="margin-left: 400px; padding-top: 20px;">Follow Me On</h3>
+            </div>
+        <div class="Rfooter"><h2 style="padding-top: 20px;">News And Updates</h2>
+            <p style="padding-top: 20px;">Stay Updted With Our New Projects</p>
+            
+            <input style="margin-top: 40px; height: 30px; width: 300px;" type="text" placeholder="Enter Your Email Address">
+            &nbsp;
+            <input  style=" height: 30px; width: 150px;font-weight: bold;" type="button" value="Send Email">
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    </body>
+</html>
